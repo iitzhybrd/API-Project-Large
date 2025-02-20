@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reseller Management</title>
+</head>
+<body>
+    <h1>Reseller Management</h1>
+
+    <h2>Create Reseller</h2>
+    <form id="createResellerForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name "username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="aov">Average Order Value (AOV):</label>
+        <input type="number" id="aov" name="aov" required><br><br>
+
+        <input type="submit" value="Create Reseller">
+    </form>
+
+    <div id="message"></div>
+
+    <h2>Get Reseller by ID</h2>
+    <form id="getResellerForm">
+        <label for="resellerId">Reseller ID:</label>
+        <input type="number" id="resellerId" name="resellerId" required>
+        <input type="submit" value="Get Reseller">
+    </form>
+
+    <div id="getResellerMessage"></div>
+    <pre id="getResellerData"></pre>
+
+    <h2>Update Reseller by ID</h2>
+    <form id="updateResellerForm">
+        <label for="updateResellerId">Reseller ID:</label>
+        <input type="number" id="updateResellerId" name="updateResellerId" required><br><br>
+
+        <label for="updateName">Name:</label>
+        <input type="text" id="updateName" name="updateName"><br><br>
+
+        <label for="updateUsername">Username:</label>
+        <input type="text" id="updateUsername" name="updateUsername"><br><br>
+
+        <label for="updateEmail">Email:</label>
+        <input type="email" id="updateEmail" name="updateEmail"><br><br>
+
+        <label for="updateAOV">Average Order Value (AOV):</label>
+        <input type="number" id="updateAOV" name="updateAOV"><br><br>
+
+        <input type="submit" value="Update Reseller">
+    </form>
+
+    <div id="updateResellerMessage"></div>
+
+    <br>
+    <br>
+
+    <h1>Stock Management</h1>
+
+    <h2>Create Stock Item</h2>
+    <form id="createStockItemForm">
+        <label for="stock_resellers_id">Resellers ID:</label>
+        <input type="number" id="stock_resellers_id" name="stock_resellers_id" required><br><br>
+
+        <label for="stock_name">Name:</label>
+        <input type="text" id="stock_name" name="stock_name" required><br><br>
+
+        <label for="stock_sku">SKU:</label>
+        <input type="number" id="stock_sku" name="stock_sku" required><br><br>
+
+        <label for="stock_price">Price:</label>
+        <input type="number" id="stock_price" name="stock_price" required><br><br>
+
+        <input type="submit" value="Create Stock Item">
+    </form>
+
+    <div id="createStockItemMessage"></div>
+
+    <h2>Get Stock Item by ID</h2>
+    <form id="getStockItemForm">
+        <label for="item_id">Stock Item ID:</label>
+        <input type="number" id="item_id" name="item_id" required>
+        <input type="submit" value="Get Stock Item">
+    </form>
+
+    <div id="getStockItemMessage"></div>
+    <pre id="getStockItemData"></pre>
+
+    <h2>Update Stock Item by ID</h2>
+    <form id="updateStockItemForm">
+        <label for="stock_update_item_id">Stock Item ID:</label>
+        <input type="number" id="stock_update_item_id" name="stock_update_item_id" required><br><br>
+
+        <label for="stock_update_resellers_id">Resellers ID:</label>
+        <input type="number" id="stock_update_resellers_id" name="stock_update_resellers_id"><br><br>
+
+        <label for="stock_update_name">Name:</label>
+        <input type="text" id="stock_update_name" name="stock_update_name"><br><br>
+
+        <label for="stock_update_sku">SKU:</label>
+        <input type="number" id="stock_update_sku" name="stock_update_sku"><br><br>
+
+        <label for="stock_update_price">Price:</label>
+        <input type="stock_number" id="stock_update_price" name="stock_update_price"><br><br>
+
+        <input type="submit" value="Update Stock Item">
+    </form>
+
+    <div id="updateStockItemMessage"></div>
+
+    <br>
+    <br>
+
+    <title>Client Management</title>
+</head>
+<body>
+    <h1>Client Management</h1>
+
+    <h2>Create Client</h2>
+    <form id="createClientForm">
+        <label for="client_resellers_id">Resellers ID:</label>
+        <input type="number" id="client_resellers_id" name="client_resellers_id" required><br><br>
+
+        <label for="client_name">Name:</label>
+        <input type="text" id="client_name" name="client_name" required><br><br>
+
+        <label for="client_orders">Orders:</label>
+        <input type="text" id="client_orders" name="client_orders" required><br><br>
+
+        <label for="client_total_spent">Total Spent:</label>
+        <input type="number" id="client_total_spent" name="client_total_spent" required><br><br>
+
+        <label for="client_aov">Average Order Value (AOV):</label>
+        <input type="number" id="client_aov" name="client_aov" required><br><br>
+
+        <input type="submit" value="Create Client">
+    </form>
+
+    <div id="createClientMessage"></div>
+
+    <h2>Get Client by ID</h2>
+    <form id="getClientForm">
+        <label for="clientId">Client ID:</label>
+        <input type="number" id="clientId" name="clientId" required>
+        <input type="submit" value="Get Client">
+    </form>
+
+    <div id="getClientMessage"></div>
+    <pre id="getClientData"></pre>
+
+    <h2>Update Client by ID</h2>
+    <form id="updateClientForm">
+        <label for="client_updateClientId">Client ID:</label>
+        <input type="number" id="client_updateClientId" name="client_updateClientId" required><br><br>
+
+        <label for="client_updateResellersId">Resellers ID:</label>
+        <input type="number" id="client_updateResellersId" name="client_updateResellersId"><br><br>
+
+        <label for="client_updateName">Name:</label>
+        <input type="text" id="client_updateName" name="client_updateName"><br><br>
+
+        <label for="client_updateOrders">Orders:</label>
+        <input type="text" id="client_updateOrders" name="client_updateOrders"><br><br>
+
+        <label for="client_updateTotalSpent">Total Spent:</label>
+        <input type="number" id="client_updateTotalSpent" name="client_updateTotalSpent"><br><br>
+
+        <label for="client_updateAOV">Average Order Value (AOV):</label>
+        <input type="number" id="client_updateAOV" name="client_updateAOV"><br><br>
+
+        <input type="submit" value="Update Client">
+    </form>
+
+    <div id="updateClientMessage"></div>
+
+    <br>
+    <br>
+
+    <h1>Client Billing Address Management</h1>
+
+    <h2>Create Client Billing Address</h2>
+    <form id="createClientBillingAddressForm">
+        <label for="client_billing_ClientsId">Client ID:</label>
+        <input type="number" id="client_billing_ClientsId" name="client_billing_ClientsId" required><br><br>
+
+        <label for="client_billing_Name">Name:</label>
+        <input type="text" id="client_billing_Name" name="client_billing_Name" required><br><br>
+
+        <label for="client_billing_Phone">Phone:</label>
+        <input type="number" id="client_billing_Phone" name="client_billing_Phone" required><br><br>
+
+        <label for="client_billing_Company">Company:</label>
+        <input type="text" id="client_billing_Company" name="client_billing_Company"><br><br>
+
+        <label for="client_billing_StreetAddress">Street Address:</label>
+        <input type="text" id="client_billing_StreetAddress" name="client_billing_StreetAddress" required><br><br>
+
+        <label for="client_billing_Country">Country:</label>
+        <input type="text" id="client_billing_Country" name="client_billing_Country" required><br><br>
+
+        <label for="client_billing_City">City:</label>
+        <input type="text" id="client_billing_City" name="client_billing_City" required><br><br>
+
+        <label for="client_billing_Region">Region:</label>
+        <input type="text" id="client_billing_Region" name="client_billing_Region" required><br><br>
+
+        <label for="client_billing_PostalCode">Postal Code:</label>
+        <input type="number" id="client_billing_PostalCode" name="client_billing_PostalCode" required><br><br>
+
+        <input type="submit" value="Create Client Billing Address">
+    </form>
+
+    <div id="createClientBillingAddressMessage"></div>
+
+    <h2>Get Client Billing Address by ID</h2>
+    <form id="getClientBillingAddressForm">
+        <label for="getClientBillingAddressId">Billing Address ID:</label>
+        <input type="number" id="getClientBillingAddressId" name="getClientBillingAddressId" required>
+        <input type="submit" value="Get Client Billing Address">
+    </form>
+
+    <div id="getClientBillingAddressMessage"></div>
+    <pre id="getClientBillingAddressData"></pre>
+
+    <h2>Update Client Billing Address by ID</h2>
+    <form id="updateClientBillingAddressForm">
+        <label for="client_billing_updateBillingAddressId">Billing Address ID:</label>
+        <input type="number" id="client_billing_updateBillingAddressId" name="client_billing_updateBillingAddressId" required><br><br>
+
+        <label for="client_billing_updateClientsId">Client ID:</label>
+        <input type="number" id="client_billing_updateClientsId" name="client_billing_updateClientsId"><br><br>
+
+        <label for="client_billing_updateName">Name:</label>
+        <input type="text" id="client_billing_updateName" name="client_billing_updateName"><br><br>
+
+        <label for="client_billing_updatePhone">Phone:</label>
+        <input type="number" id="client_billing_updatePhone" name="client_billing_updatePhone"><br><br>
+
+        <label for="client_billing_updateCompany">Company:</label>
+        <input type="text" id="client_billing_updateCompany" name="client_billing_updateCompany"><br><br>
+
+        <label for="client_billing_updateStreetAddress">Street Address:</label>
+        <input type="text" id="client_billing_updateStreetAddress" name="client_billing_updateStreetAddress"><br><br>
+
+        <label for="client_billing_updateCountry">Country:</label>
+        <input type="text" id="client_billing_updateCountry" name="client_billing_updateCountry"><br><br>
+
+        <label for="client_billing_updateCity">City:</label>
+        <input type="text" id="client_billing_updateCity" name="client_billing_updateCity"><br><br>
+
+        <label for="client_billing_updateRegion">Region:</label>
+        <input type="text" id="client_billing_updateRegion" name="client_billing_updateRegion"><br><br>
+
+        <label for="client_billing_updatePostalCode">Postal Code:</label>
+        <input type="number" id="client_billing_updatePostalCode" name="client_billing_updatePostalCode"><br><br>
+
+        <input type="submit" value="Update Client Billing Address">
+    </form>
+
+    <div id="updateClientBillingAddressMessage"></div>
+
+    <br>
+    <br>
+
+    <h1>Client Shipping Address Management</h1>
+
+    <h2>Create Client Shipping Address</h2>
+    <form id="createClientShippingAddressForm">
+        <label for="client_shipping_clients_id">Client ID:</label>
+        <input type="number" id="client_shipping_clients_id" name="client_shipping_clients_id" required><br><br>
+
+        <label for="client_shipping_name">Name:</label>
+        <input type="text" id="client_shipping_name" name="client_shipping_name" required><br><br>
+
+        <label for="client_shipping_phone">Phone:</label>
+        <input type="number" id="client_shipping_phone" name="client_shipping_phone" required><br><br>
+
+        <label for="client_shipping_company">Company:</label>
+        <input type="text" id="client_shipping_company" name="client_shipping_company"><br><br>
+
+        <label for="client_shipping_street_address">Street Address:</label>
+        <input type="text" id="client_shipping_street_address" name="client_shipping_street_address" required><br><br>
+
+        <label for="client_shipping_country">Country:</label>
+        <input type="text" id="client_shipping_country" name="client_shipping_country" required><br><br>
+
+        <label for="client_shipping_city">City:</label>
+        <input type="text" id="client_shipping_city" name="client_shipping_city" required><br><br>
+
+        <label for="client_shipping_region">Region:</label>
+        <input type="text" id="client_shipping_region" name="client_shipping_region" required><br><br>
+
+        <label for="client_shipping_postal_code">Postal Code:</label>
+        <input type="number" id="client_shipping_postal_code" name="client_shipping_postal_code" required><br><br>
+
+        <input type="submit" value="Create Client Shipping Address">
+    </form>
+
+    <div id="createClientShippingAddressMessage"></div>
+
+    <h2>Get Client Shipping Address by ID</h2>
+    <form id="getClientShippingAddressForm">
+        <label for="clientshippingAddressId">Shipping Address ID:</label>
+        <input type="number" id="clientshippingAddressId" name="clientshippingAddressId" required>
+        <input type="submit" value="Get Client Shipping Address">
+    </form>
+
+    <div id="getClientShippingAddressMessage"></div>
+    <pre id="getClientShippingAddressData"></pre>
+
+    <h2>Update Client Shipping Address by ID</h2>
+    <form id="updateClientShippingAddressForm">
+        <label for="client_shipping_updateShippingAddressId">Shipping Address ID:</label>
+        <input type="number" id="client_shipping_updateShippingAddressId" name="client_shipping_updateShippingAddressId" required><br><br>
+
+        <label for="client_shipping_updateClientsId">Client ID:</label>
+        <input type="number" id="client_shipping_updateClientsId" name="client_shipping_updateClientsId"><br><br>
+
+        <label for="client_shipping_updateName">Name:</label>
+        <input type="text" id="client_shipping_updateName" name="client_shipping_updateName"><br><br>
+
+        <label for="client_shipping_updatePhone">Phone:</label>
+        <input type="number" id="client_shipping_updatePhone" name="client_shipping_updatePhone"><br><br>
+
+        <label for="client_shipping_updateCompany">Company:</label>
+        <input type="text" id="client_shipping_updateCompany" name="client_shipping_updateCompany"><br><br>
+
+        <label for="client_shipping_updateStreetAddress">Street Address:</label>
+        <input type="text" id="client_shipping_updateStreetAddress" name="client_shipping_updateStreetAddress"><br><br>
+
+        <label for="client_shipping_updateCountry">Country:</label>
+        <input type="text" id="client_shipping_updateCountry" name="client_shipping_updateCountry"><br><br>
+
+        <label for="client_shipping_updateCity">City:</label>
+        <input type="text" id="client_shipping_updateCity" name="client_shipping_updateCity"><br><br>
+
+        <label for="client_shipping_updateRegion">Region:</label>
+        <input type="text" id="client_shipping_updateRegion" name="client_shipping_updateRegion"><br><br>
+
+        <label for="client_shipping_updatePostalCode">Postal Code:</label>
+        <input type="number" id="client_shipping_updatePostalCode" name="client_shipping_updatePostalCode"><br><br>
+
+        <input type="submit" value="Update Shipping Address">
+    </form>
+
+    <div id="updateClientShippingAddressMessage"></div>
+ 
+    <br>
+    <br>
+
+    <h1>Login Details Management</h1>
+
+    <h2>Create Login Details</h2>
+    <form id="createLoginDetailsForm">
+        <label for="login_clients_id">Clients ID:</label>
+        <input type="number" id="login_clients_id" name="login_clients_id" required><br><br>
+
+        <label for="login_username">Username:</label>
+        <input type="text" id="login_username" name="login_username" required><br><br>
+
+        <label for="login_email_address">Email Address:</label>
+        <input type="email" id="login_email" name="login_email" required><br><br>
+
+        <label for="login_password">Password:</label>
+        <input type="password" id="login_password" name="login_password" required><br><br>
+
+        <button type="submit">Create Login Details</button>
+    </form>
+    <p id="createLoginDetailsMessage"></p>
+
+    <h2>Get Login Details by ID</h2>
+    <form id="getLoginDetailsForm">
+        <label for="loginDetailsId">Login Details ID:</label>
+        <input type="number" id="loginDetailsId" name="loginDetailsId" required><br><br>
+        <button type="submit">Get Login Details</button>
+    </form>
+    <p id="getLoginDetailsMessage"></p>
+    <pre id="getLoginDetailsData"></pre>
+
+    <h2>Update Login Details by ID</h2>
+    <form id="updateLoginDetailsForm">
+        <label for="login_updateLoginDetailsId">Login Details ID:</label>
+        <input type="number" id="login_updateLoginDetailsId" name="login_updateLoginDetailsId" required><br><br>
+
+        <label for="login_updateClientsId">Clients ID:</label>
+        <input type="number" id="login_updateClientsId" name="login_updateClientsId" required><br><br>
+
+        <label for="login_updateUsername">Username:</label>
+        <input type="text" id="login_updateUsername" name="login_updateUsername" required><br><br>
+
+        <label for="login_updateEmail">Email Address:</label>
+        <input type="email" id="login_updateEmail" name="login_updateEmail" required><br><br>
+
+        <label for="login_updatePassword">Password:</label>
+        <input type="password" id="login_updatePassword" name="login_updatePassword" required><br><br>
+
+        <button type="submit">Update Login Details</button>
+    </form>
+    <p id="updateLoginDetailsMessage"></p>
+
+    <br>
+    <br>
+
+    <h1>Orders Management</h1>
+
+    <h2>Create Order</h2>
+    <form id="createOrderForm">
+        <label for="order_clients_id">Clients ID:</label>
+        <input type="number" id="order_clients_id" name="order_clients_id" required><br><br>
+
+        <label for="order_orders">Order:</label>
+        <input type="text" id="order_orders" name="order_orders" required><br><br>
+
+        <label for="order_status">Status:</label>
+        <input type="text" id="order_status" name="order_status" required><br><br>
+
+        <label for="order_error">Error:</label>
+        <input type="text" id="order_error" name="order_error"><br><br>
+
+        <label for="order_total">Total:</label>
+        <input type="number" id="order_total" name="order_total" step="0.01" required><br><br>
+
+        <button type="submit">Create Order</button>
+    </form>
+    <p id="createOrderMessage"></p>
+
+    <h2>Get Order by ID</h2>
+    <form id="getOrderForm">
+        <label for="orderId">Order ID:</label>
+        <input type="number" id="orderId" name="orderId" required><br><br>
+        <button type="submit">Get Order</button>
+    </form>
+    <p id="getOrderMessage"></p>
+    <pre id="getOrderData"></pre>
+
+    <h2>Update Order by ID</h2>
+    <form id="updateOrderForm">
+        <label for="order_updateOrderId">Order ID:</label>
+        <input type="number" id="order_updateOrderId" name="order_updateOrderId" required><br><br>
+
+        <label for="order_updateClientsId">Clients ID:</label>
+        <input type="number" id="order_updateClientsId" name="order_updateClientsId" required><br><br>
+
+        <label for="order_updateOrders">Order:</label>
+        <input type="text" id="order_updateOrders" name="order_updateOrders" required><br><br>
+
+        <label for="order_updateStatus">Status:</label>
+        <input type="text" id="order_updateStatus" name="order_updateStatus" required><br><br>
+
+        <label for="order_updateError">Error:</label>
+        <input type="text" id="order_updateError" name="order_updateError"><br><br>
+
+        <label for="order_updateTotal">Total:</label>
+        <input type="number" id="order_updateTotal" name="order_updateTotal" step="0.01" required><br><br>
+
+        <button type="submit">Update Order</button>
+    </form>
+    <p id="updateOrderMessage"></p>
+
+    <br>
+    <br>
+
+    <h1>Reseller Orders Management</h1>
+
+    <h2>Create Reseller Order</h2>
+    <form id="createResellerOrderForm">
+        <label for="resellers_order_resellers_id">Resellers ID:</label>
+        <input type="number" id="resellers_order_resellers_id" name="resellers_order_resellers_id" required><br><br>
+
+        <label for="resellers_order_resellerOrder">Order:</label>
+        <input type="text" id="resellers_order_resellerOrder" name="resellers_order_resellerOrder" required><br><br>
+
+        <label for="resellers_order_resellerStatus">Status:</label>
+        <input type="text" id="resellers_order_resellerStatus" name="resellers_order_resellerStatus" required><br><br>
+
+        <label for="resellers_order_resellerError">Error:</label>
+        <input type="text" id="resellers_order_resellerError" name="resellers_order_resellerError"><br><br>
+
+        <label for="resellers_order_resellerTotal">Total:</label>
+        <input type="number" id="resellers_order_resellerTotal" name="resellers_order_resellerTotal" step="0.01" required><br><br>
+
+        <button type="submit">Create Reseller Order</button>
+    </form>
+    <p id="createResellerOrderMessage"></p>
+
+    <h2>Get Reseller Order by ID</h2>
+    <form id="getResellerOrderForm">
+        <label for="resellerOrderId">Reseller Order ID:</label>
+        <input type="number" id="resellerOrderId" name="resellerOrderId" required><br><br>
+        <button type="submit">Get Reseller Order</button>
+    </form>
+    <p id="getResellerOrderMessage"></p>
+    <pre id="getResellerOrderData"></pre>
+
+    <h2>Update Reseller Order by ID</h2>
+    <form id="updateResellerOrderForm">
+        <label for="reseller_updateResellerOrderId">Reseller Order ID:</label>
+        <input type="number" id="reseller_updateResellerOrderId" name="reseller_updateResellerOrderId" required><br><br>
+
+        <label for="reseller_updateResellersId">Resellers ID:</label>
+        <input type="number" id="reseller_updateResellersId" name="reseller_updateResellersId" required><br><br>
+
+        <label for="reseller_updateResellerOrder">Order:</label>
+        <input type="text" id="reseller_updateResellerOrder" name="reseller_updateResellerOrder" required><br><br>
+
+        <label for="reseller_updateResellerStatus">Status:</label>
+        <input type="text" id="reseller_updateResellerStatus" name="reseller_updateResellerStatus" required><br><br>
+
+        <label for="reseller_updateResellerError">Error:</label>
+        <input type="text" id="reseller_updateResellerError" name="reseller_updateResellerError"><br><br>
+
+        <label for="reseller_updateResellerTotal">Total:</label>
+        <input type="number" id="reseller_updateResellerTotal" name="reseller_updateResellerTotal" step="0.01" required><br><br>
+
+        <button type="submit">Update Reseller Order</button>
+    </form>
+    <p id="updateResellerOrderMessage"></p>
+
+    <br>
+    <br>
+
+    <h1>Billing Address Management</h1>
+
+    <h2>Create Billing Address</h2>
+    <form id="createBillingAddressForm">
+        <label for="billing_resellers_id">Reseller ID:</label>
+        <input type="number" id="billing_resellers_id" name="billing_resellers_id" required><br><br>
+
+        <label for="billing_name">Name:</label>
+        <input type="text" id="billing_Name" name="billing_Name" required><br><br>
+
+        <label for="billing_phone">Phone:</label>
+        <input type="number" id="billing_Phone" name="billing_Phone" required><br><br>
+
+        <label for="billing_company">Company:</label>
+        <input type="text" id="billing_Company" name="billing_Company"><br><br>
+
+        <label for="billing_street_address">Street Address:</label>
+        <input type="text" id="billing_StreetAddress" name="billing_StreetAddress" required><br><br>
+
+        <label for="billing_country">Country:</label>
+        <input type="text" id="billing_Country" name="billing_Country" required><br><br>
+
+        <label for="billing_city">City:</label>
+        <input type="text" id="billing_City" name="billing_City" required><br><br>
+
+        <label for="billing_region">Region:</label>
+        <input type="text" id="billing_Region" name="billing_Region" required><br><br>
+
+        <label for="billing_postal_code">Postal Code:</label>
+        <input type="number" id="billing_PostalCode" name="billing_PostalCode" required><br><br>
+
+        <button type="submit">Create Billing Address</button>
+    </form>
+
+    <div id="createBillingAddressMessage"></div>
+
+    <h2>Get Billing Address by ID</h2>
+    <form id="getBillingAddressForm">
+        <label for="billingAddressId">Billing Address ID:</label>
+        <input type="number" id="billingAddressId" name="billingAddressId" required>
+        <input type="submit" value="Get Billing Address">
+    </form>
+
+    <div id="getBillingAddressMessage"></div>
+    <pre id="getBillingAddressData"></pre>
+
+    <h2>Update Billing Address by ID</h2>
+    <form id="updateBillingAddressForm">
+        <label for="billing_updateBillingAddressId">Billing Address ID:</label>
+        <input type="number" id="billing_updateBillingAddressId" name="billing_updateBillingAddressId" required><br><br>
+
+        <label for="billing_updateResellersId">Reseller ID:</label>
+        <input type="number" id="billing_updateResellersId" name="billing_updateResellersId"><br><br>
+
+        <label for="billing_updateName">Name:</label>
+        <input type="text" id="billing_updateName" name="billing_updateName"><br><br>
+
+        <label for="billing_updatePhone">Phone:</label>
+        <input type="number" id="billing_updatePhone" name="billing_updatePhone"><br><br>
+
+        <label for="billing_updateCompany">Company:</label>
+        <input type="text" id="billing_updateCompany" name="billing_updateCompany"><br><br>
+
+        <label for="billing_updateStreetAddress">Street Address:</label>
+        <input type="text" id="billing_updateStreetAddress" name="billing_updateStreetAddress"><br><br>
+
+        <label for="billing_updateCountry">Country:</label>
+        <input type="text" id="billing_updateCountry" name="billing_updateCountry"><br><br>
+
+        <label for="billing_updateCity">City:</label>
+        <input type="text" id="billing_updateCity" name="billing_updateCity"><br><br>
+
+        <label for="billing_updateRegion">Region:</label>
+        <input type="text" id="billing_updateRegion" name="billing_updateRegion"><br><br>
+
+        <label for="billing_updatePostalCode">Postal Code:</label>
+        <input type="number" id="billing_updatePostalCode" name="billing_updatePostalCode"><br><br>
+
+        <input type="submit" value="Update Billing Address">
+    </form>
+
+    <div id="updateBillingAddressMessage"></div>
+
+    <br>
+    <br>
+
+    
+<h1>Shipping Address Management</h1>
+
+<h2>Create Shipping Address</h2>
+<form id="createShippingAddressForm">
+    <label for="shipping_createResellersId">Resellers ID:</label>
+    <input type="number" id="shipping_createResellersId" name="shipping_createResellersId" required><br><br>
+
+    <label for="shipping_createName">Name:</label>
+    <input type="text" id="shipping_createName" name="shipping_createName" required><br><br>
+
+    <label for="shipping_createPhone">Phone:</label>
+    <input type="number" id="shipping_createPhone" name="shipping_createPhone" required><br><br>
+
+    <label for="shipping_createCompany">Company:</label>
+    <input type="text" id="shipping_createCompany" name="shipping_createCompany"><br><br>
+
+    <label for="shipping_createStreetAddress">Street Address:</label>
+    <input type="text" id="shipping_createStreetAddress" name="shipping_createStreetAddress" required><br><br>
+
+    <label for="shipping_createCountry">Country:</label>
+    <input type="text" id="shipping_createCountry" name="shipping_createCountry" required><br><br>
+
+    <label for="shipping_createCity">City:</label>
+    <input type="text" id="shipping_createCity" name="shipping_createCity" required><br><br>
+
+    <label for="shipping_createRegion">Region:</label>
+    <input type="text" id="shipping_createRegion" name="shipping_createRegion" required><br><br>
+
+    <label for="shipping_createPostalCode">Postal Code:</label>
+    <input type="number" id="shipping_createPostalCode" name="shipping_createPostalCode" required><br><br>
+
+    <input type="submit" value="Create Shipping Address">
+</form>
+
+<div id="createShippingAddressMessage"></div>
+
+<h2>Get Shipping Address by ID</h2>
+<form id="getShippingAddressForm">
+    <label for="getShippingAddressId">Shipping Address ID:</label>
+    <input type="number" id="getShippingAddressId" name="getShippingAddressId" required>
+    <input type="submit" value="Get Shipping Address">
+</form>
+
+<div id="getShippingAddressMessage"></div>
+<pre id="getShippingAddressData"></pre>
+
+<h2>Update Shipping Address by ID</h2>
+<form id="updateShippingAddressForm">
+    <label for="shipping_updateShippingAddressId">Shipping Address ID:</label>
+    <input type="number" id="shipping_updateShippingAddressId" name="shipping_updateShippingAddressId" required><br><br>
+
+    <label for="shipping_updateResellersId">Resellers ID:</label>
+    <input type="number" id="shipping_updateResellersId" name="shipping_updateResellersId"><br><br>
+
+    <label for="shipping_updateName">Name:</label>
+    <input type="text" id="shipping_updateName" name="shipping_updateName"><br><br>
+
+    <label for="shipping_updatePhone">Phone:</label>
+    <input type="number" id="shipping_updatePhone" name="shipping_updatePhone"><br><br>
+
+    <label for="shipping_updateCompany">Company:</label>
+    <input type="text" id="shipping_updateCompany" name="shipping_updateCompany"><br><br>
+
+    <label for="shipping_updateStreetAddress">Street Address:</label>
+    <input type="text" id="shipping_updateStreetAddress" name="shipping_updateStreetAddress"><br><br>
+
+    <label for="shipping_updateCountry">Country:</label>
+    <input type="text" id="shipping_updateCountry" name="shipping_updateCountry"><br><br>
+
+    <label for="shipping_updateCity">City:</label>
+    <input type="text" id="shipping_updateCity" name="shipping_updateCity"><br><br>
+
+    <label for="shipping_updateRegion">Region:</label>
+    <input type="text" id="shipping_updateRegion" name="shipping_updateRegion"><br><br>
+
+    <label for="shipping_updatePostalCode">Postal Code:</label>
+    <input type="number" id="shipping_updatePostalCode" name="shipping_updatePostalCode"><br><br>
+
+    <input type="submit" value="Update Shipping Address">
+</form>
+
+<div id="updateShippingAddressMessage"></div>
+
+
+    <script src="resellers.js"></script>
+    <script src="stock.js"></script>
+    <script src="clients.js"></script>
+    <script src="clients_billing_address.js"></script>
+    <script src="clients_shipping_address.js"></script>
+    <script src="login_details.js"></script>
+    <script src="orders.js"></script>
+    <script src="reseller_orders.js"></script>
+    <script src="billing_address.js"></script>
+    <script src="shipping_address.js"></script>
+
+
+</body>
+</html>

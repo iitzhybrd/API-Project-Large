@@ -1,0 +1,90 @@
+# billing address
+{
+    "resellers_id": 1,
+    "Name": "John Doe",
+    "Phone": 1234567890,
+    "Company": "ABC Inc",
+    "Street_address": "123 Main St",
+    "Country": "USA",
+    "City": "New York",
+    "Postal_code": 10001
+}
+
+# clients billing address
+{
+    "clients_id": 1,
+    "Name": "John Doe",
+    "Phone": 1234567890,
+    "Company": "ABC Inc",
+    "Street_address": "123 Main St",
+    "Country": "USA",
+    "City": "New York",
+    "Postal_code": 10001
+}
+
+# clients shipping address
+{
+    "clients_id": 1,
+    "Name": "John Doe",
+    "Phone": 1234567890,
+    "Company": "ABC Inc",
+    "Street_address": "123 Main St",
+    "Country": "USA",
+    "City": "New York",
+    "Postal_code": 10001
+}
+
+# clients
+{
+    "resellers_id": 1,
+    "Name": "John Doe",
+    "Total_spent": 1000.0
+}
+
+# login details
+{
+    "clients_id": 1,
+    "Username": "john_doe",
+    "Email_address": "john.doe@example.com",
+    "Password": "password123"
+}
+
+# orders
+{
+    "clients_id": 1,
+    "Status": "Processing",
+    "Total": 100.0
+}
+
+# reseller order
+{
+    "resellers_id": 1,
+    "Status": "Processing",
+    "Total": 100.0
+}
+
+# resellers
+{
+    "Name": "John Doe",
+    "Username": "johndoe123",
+    "Email": "johndoe@example.com"
+}
+
+# shippping address
+{
+    "resellers_id": 1,
+    "Name": "John Doe",
+    "Phone": 1234567890,
+    "Company": "ABC Inc",
+    "Street_address": "123 Main St",
+    "Country": "United States",
+    "City": "New York",
+    "Postal_code": 10001
+}
+
+# stock
+{
+    "resellers_id": 2,
+    "Name": "Product Name",
+    "Price": 99.99
+}
